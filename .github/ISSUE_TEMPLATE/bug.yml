@@ -1,0 +1,27 @@
+name: Report a bug
+description: Tell us what went wrong without sharing private data.
+body:
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include API keys, private transcripts, recordings, or history files. Report security vulnerabilities privately through the Security tab."
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating system
+      options: [macOS, Windows 11]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Voxa version and OS version
+      placeholder: "Voxa 0.2.0 beta / Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened?
+      description: Include steps, expected result, actual result, and the target app. Use invented text.
+    validations:
+      required: true
