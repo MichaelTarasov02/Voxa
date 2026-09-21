@@ -20,13 +20,13 @@ Choose your platform. You don't need a GitHub account to download Voxa.
 
 | | macOS | Windows |
 | :--- | :--- | :--- |
-| **Installer** | **[Download for Mac ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.1.1/Voxa-0.1.1-universal.dmg)** | **[Download for Windows ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.0-windows-beta.1/Voxa-0.2.0-Windows-x64-Setup.exe)** |
-| Current build | 0.1.1 beta | 0.2.0 beta |
+| **Installer** | **[Download for Mac ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.3.0-macos-beta.1/Voxa-0.3.0-universal.dmg)** | **[Download for Windows ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.1-windows-beta.1/Voxa-0.2.1-Windows-x64-Setup.exe)** |
+| Current build | 0.3.0 beta | 0.2.1 beta |
 | Requires | macOS 14 or later | Windows 11, x64 |
 | Hardware | Apple Silicon and Intel | Intel / AMD; native ARM build not available |
-| Package | Drag-to-install DMG · about 3 MB | Per-user installer · about 51 MB |
+| Package | Drag-to-install DMG | Per-user installer |
 
-[All releases & checksums](https://github.com/MichaelTarasov02/Voxa/releases) · [Windows portable ZIP](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.0-windows-beta.1/Voxa-0.2.0-Windows-x64-Portable.zip)
+[All releases & checksums](https://github.com/MichaelTarasov02/Voxa/releases) · [Windows portable ZIP](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.1-windows-beta.1/Voxa-0.2.1-Windows-x64-Portable.zip)
 
 > **These are beta builds.** Mac releases are not notarized; the Windows installer is unsigned. Your computer may show a security warning. Read the installation notes below before opening the app. Only download from this repository or someone you trust.
 
@@ -38,11 +38,17 @@ Choose your platform. You don't need a GitHub account to download Voxa.
 
 **Dictate in another language, get English text.** The English mode uses a friendly, semi-formal American English style. It's useful for a message or a draft you'd otherwise have to translate yourself.
 
-**Read selected text in Russian.** Select text in another app and use the translation shortcut. The result appears in a small bottom panel, with technical terms kept in English where appropriate. It doesn't replace your selection or paste into the message box. Escape closes it; it also closes after 10 seconds.
+**Read selected text in Russian.** Select text in another app and use the translation shortcut. The result appears in a small bottom panel, with technical terms kept in English where appropriate. It doesn't replace your selection or paste into the message box. Escape closes it. On Mac, the ten-second timer pauses while your pointer is over the preview and restarts when you move away. Windows previews close after ten seconds.
+
+**Translate text without recording.** Type or paste into Translation and choose a target language; American English is the default. Mac translates after a short pause and offers alternative wording. On Windows, press Translate or Ctrl + Enter.
+
+**On Mac, revisit translations and track their cost.** History → Translations keeps results from the translator and Control + Fn. Home and Stats show translated words and estimated spending across dictation, text translation and word alternatives. Rephrasing adds its request cost without counting the same source text and target language again. Deleting text history does not erase spending totals.
+
+**Teach the Mac dictionary your spellings.** When you correct a name or term after dictation, Voxa can suggest remembering it. Review the suggestion before saving. This depends on the editor exposing the text through Accessibility; not every app does.
 
 **Keep a history you can return to.** Search transcripts, copy them, play saved audio, or retry a failed request. If the API fails during processing, the recording is retained for another attempt.
 
-**Adjust it to your work.** Change shortcuts, add vocabulary for names and technical terms, choose English or Russian for the interface, and see estimated dictation usage and cost. The Windows recorder also has pause/resume controls.
+**Adjust it to your work.** Change shortcuts, add vocabulary for names and technical terms, choose English or Russian for the interface, and see estimated usage and cost. Both recorders have pause/resume controls.
 
 <details>
 <summary><strong>See the Windows interface</strong></summary>
@@ -89,7 +95,7 @@ Place the cursor in a text field and use your dictation shortcut. Speak for a fe
 
 Shortcuts are configurable. Mac also supports fallback combinations without Fn. Windows uses standard keys because many keyboards handle Fn in hardware and don't expose it to apps.
 
-The recording panel has cancel and finish controls; Windows also has pause/resume. Closing the main Windows window keeps Voxa in the system tray. Choose **Quit** from the tray menu to exit.
+The recording panel has cancel, finish and pause/resume controls. Closing the main Windows window keeps Voxa in the system tray. Choose **Quit** from the tray menu to exit.
 
 ## Your recordings, your key
 
@@ -103,6 +109,8 @@ Read the [privacy details](PRIVACY.md), including storage locations, retention a
 ## Before you rely on it
 
 The Mac and Windows apps have different version numbers and aren't yet identical. Windows currently uses `gpt-4o-transcribe` and `gpt-4o-mini`; some Mac export, model and reporting options aren't available there. Windows recordings are limited to 10 minutes, excluding pauses.
+
+The new translation history, automatic translation, word alternatives, dictionary learning, expanded spending totals and recent Mac interface fixes are **macOS-only**. Windows 0.2.1 adds the basic text translator, not those Mac features. Older, untracked translation costs cannot be recovered.
 
 Automatic paste depends on the target app, its permissions and focus. Password fields, Windows apps running as administrator and some custom editors may reject it. If you change apps while a recording is processing, look in History and copy the result instead. Always review AI-generated transcription and translation; wording can be wrong.
 
