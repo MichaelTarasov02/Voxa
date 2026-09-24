@@ -20,8 +20,8 @@ Choose your platform. You don't need a GitHub account to download Voxa.
 
 | | macOS | Windows |
 | :--- | :--- | :--- |
-| **Installer** | **[Download for Mac ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.3.0-macos-beta.1/Voxa-0.3.0-universal.dmg)** | **[Download for Windows ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.1-windows-beta.1/Voxa-0.2.1-Windows-x64-Setup.exe)** |
-| Current build | 0.3.0 beta | 0.2.1 beta |
+| **Installer** | **[Download for Mac ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.3.1-macos-beta.1/Voxa-0.3.1-universal.dmg)** | **[Download for Windows ↓](https://github.com/MichaelTarasov02/Voxa/releases/download/v0.2.1-windows-beta.1/Voxa-0.2.1-Windows-x64-Setup.exe)** |
+| Current build | 0.3.1 beta | 0.2.1 beta |
 | Requires | macOS 14 or later | Windows 11, x64 |
 | Hardware | Apple Silicon and Intel | Intel / AMD; native ARM build not available |
 | Package | Drag-to-install DMG | Per-user installer |
@@ -36,7 +36,7 @@ Choose your platform. You don't need a GitHub account to download Voxa.
 
 **Get readable text without typing the punctuation.** Cleanup helps with grammar, punctuation and speech errors. Review names, numbers and important details before sending.
 
-**Dictate in another language, get English text.** The English mode uses a friendly, semi-formal American English style. It's useful for a message or a draft you'd otherwise have to translate yourself.
+**Dictate and translate into a language you choose.** Voice translation starts with American English; selected-text translation starts with your chosen native language. The in-app translator has its own independent target.
 
 **Read selected text in Russian.** Select text in another app and use the translation shortcut. The result appears in a small bottom panel, with technical terms kept in English where appropriate. It doesn't replace your selection or paste into the message box. Escape closes it. On Mac, the ten-second timer pauses while your pointer is over the preview and restarts when you move away. Windows previews close after ten seconds.
 
@@ -44,7 +44,7 @@ Choose your platform. You don't need a GitHub account to download Voxa.
 
 **On Mac, revisit translations and track their cost.** History → Translations keeps results from the translator and Control + Fn. Home and Stats show translated words and estimated spending across dictation, text translation and word alternatives. Rephrasing adds its request cost without counting the same source text and target language again. Deleting text history does not erase spending totals.
 
-**Teach the Mac dictionary your spellings.** When you correct a name or term after dictation, Voxa can suggest remembering it. Review the suggestion before saving. This depends on the editor exposing the text through Accessibility; not every app does.
+**Teach the Mac app your spellings, if you opt in.** Correct a name or term after a confirmed paste and Voxa can save a plausible correction automatically. A brief notice offers Undo. Dictionary groups variants under a preferred spelling and lets you edit or delete them. This depends on the editor exposing text through Accessibility; not every app does. Up to 12 saved spellings may be sent to OpenAI with later dictations when an explicit speech language is selected.
 
 **Keep a history you can return to.** Search transcripts, copy them, play saved audio, or retry a failed request. If the API fails during processing, the recording is retained for another attempt.
 
@@ -89,8 +89,8 @@ Place the cursor in a text field and use your dictation shortcut. Speak for a fe
 | Action | macOS defaults | Windows defaults |
 | :--- | :--- | :--- |
 | Start / finish dictation | **Fn** | **Ctrl + Alt + D** |
-| Dictate into English | **Shift + Fn** | **Ctrl + Alt + Shift + D** |
-| Translate selected text into Russian | **Control + Fn** | **Ctrl + Alt + R** |
+| Dictate with translation (American English by default on Mac) | **Shift + Fn** | **Ctrl + Alt + Shift + D** |
+| Translate selected text (your chosen language on Mac) | **Control + Fn** | **Ctrl + Alt + R** |
 | Cancel recording / close preview | **Escape** | **Escape** |
 
 Shortcuts are configurable. Mac also supports fallback combinations without Fn. Windows uses standard keys because many keyboards handle Fn in hardware and don't expose it to apps.
@@ -110,7 +110,7 @@ Read the [privacy details](PRIVACY.md), including storage locations, retention a
 
 The Mac and Windows apps have different version numbers and aren't yet identical. Windows currently uses `gpt-4o-transcribe` and `gpt-4o-mini`; some Mac export, model and reporting options aren't available there. Windows recordings are limited to 10 minutes, excluding pauses.
 
-The new translation history, automatic translation, word alternatives, dictionary learning, expanded spending totals and recent Mac interface fixes are **macOS-only**. Windows 0.2.1 adds the basic text translator, not those Mac features. Older, untracked translation costs cannot be recovered.
+The new translation history, automatic translation, word alternatives, personalized recognition, expanded spending totals and recent Mac interface fixes are **macOS-only**. Windows 0.2.1 adds the basic text translator, not those Mac features. Older, untracked translation costs cannot be recovered.
 
 Automatic paste depends on the target app, its permissions and focus. Password fields, Windows apps running as administrator and some custom editors may reject it. If you change apps while a recording is processing, look in History and copy the result instead. Always review AI-generated transcription and translation; wording can be wrong.
 

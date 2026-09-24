@@ -1,12 +1,12 @@
 # Voxa privacy notes
 
-Last updated: September 21, 2026. Covers the macOS 0.3.0 and Windows 0.2.1 beta downloads in this repository.
+Last updated: September 24, 2026. Covers the macOS 0.3.1 and Windows 0.2.1 beta downloads in this repository.
 
 ## What leaves your device
 
 Voxa connects directly to OpenAI using your API key. It sends recordings for transcription and text for cleanup or translation. Selected-text translation sends the text you select. Your key is included as authentication for OpenAI requests.
 
-The text translator sends the entered text and target language. On Mac, it does so automatically after a typing pause. Requesting word alternatives sends the selected word, translated context and original source text; requesting another translation also sends the previous result. Relevant vocabulary may be included to preserve your preferred terminology.
+The text translator sends the entered text and target language. On Mac, it does so automatically after a typing pause. Requesting word alternatives sends the selected word, translated context and original source text; requesting another translation also sends the previous result. Relevant vocabulary may be included to preserve your preferred terminology. If Mac personalization is enabled, up to 12 saved spellings may also accompany a dictation with an explicitly selected Russian or English speech language. Auto-detected speech has no audio vocabulary prompt. Relevant saved aliases and any context you entered may accompany text cleanup for that dictation.
 
 This processing uses OpenAI's API and is subject to your agreement with OpenAI and its data policies. Voxa doesn't promise zero retention by OpenAI. Check your account's policies before sending confidential, regulated or other sensitive material.
 
@@ -21,7 +21,7 @@ Voxa doesn't operate a separate transcription server or include product analytic
 
 Recordings and transcripts are local files, not an encrypted Voxa vault. Your operating-system account, disk encryption and backup settings determine who else may access them. Device backups may retain copies after you delete them from the app.
 
-Mac also stores translation originals/results, dictionary entries, and usage events locally. With dictionary learning enabled, Voxa briefly observes the focused editor after inserting a dictation to detect corrections. Suggestions require your approval. Usage events retain model names, timestamps, estimated costs, token counts and source-text/target-language fingerprints for deduplication. These fingerprints are hashes, not encrypted copies or a promise of anonymity.
+Mac also stores translation originals/results, dictionary entries, a personal vocabulary of names and spelling variants, and usage events locally. Personalization is off by default for new installs. If enabled, Voxa briefly observes the same focused editor after confirming a pasted dictation. Plausible name or term corrections may be saved automatically; a brief notice offers Undo. You can turn learning off and remove saved entries in Dictionary. Optional role and organization details are entered by you, not inferred from recordings. Usage events retain model names, timestamps, estimated costs, token counts and source-text/target-language fingerprints for deduplication. These fingerprints are hashes, not encrypted copies or a promise of anonymity.
 
 ## Retention and deletion
 
